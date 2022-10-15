@@ -50,14 +50,18 @@ public class locatorsPractice {
 		
 		List<WebElement> tble_lis = driver.findElements(By.cssSelector("table>tbody>tr>td"));
 		System.out.println(tble_lis.size());	
-	
+		List<String> row_2 = new ArrayList<String>();
 		for(int j=0;j<tble_lis.size();j++)
 		{
-			
+//			System.out.println(j+" - "+tble_lis.get(j).getText());
+			if (j%7 == 2)
+			{
+//				System.out.println(j+" - "+tble_lis.get(j).getText());
+				row_2.add(tble_lis.get(j).getText());	 
+				
+			}			
 		}
-		
-		
-		
+		System.out.println("Desired result is : "+ row_2.get(3));
 	}
 
 }
