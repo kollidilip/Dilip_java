@@ -1,0 +1,25 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class locatorsPractice {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver", "D:\\Dilip_java\\geckodriver.exe");
+		
+		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("http://the-internet.herokuapp.com/");
+		System.out.println("Loading website http://the-internet.herokuapp.com/");
+		
+		WebElement element = driver.findElement(By.cssSelector("#content ui"));
+		System.out.println(element.getTagName());
+		
+		
+		
+		
+		
+	}
+
+}
